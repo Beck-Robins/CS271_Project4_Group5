@@ -1,4 +1,4 @@
-mytests: main.cpp graph.o
+mytests: mytests.cpp graph.o
 	g++ -std=c++17 -g -o mytests mytests.cpp graph.o
 	./mytests
 
