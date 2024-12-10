@@ -1,3 +1,9 @@
+//==========================================
+//Damian Nguyen, Beck Robins
+//Project 4
+//Graph.hpp
+//Contains the definition for class Graph
+//==========================================
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 #include <vector>
