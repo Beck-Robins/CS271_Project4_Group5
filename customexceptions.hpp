@@ -1,3 +1,10 @@
+//==========================================
+//Damian Nguyen, Beck Robins
+//Project 4
+//customexceptions.hpp
+//Contains the custom exception used for class Graph
+//==========================================
+
 #ifndef CUSTOMEXCEPTIONS_HPP
 #define CUSTOMEXCEPTIONS_HPP
 
