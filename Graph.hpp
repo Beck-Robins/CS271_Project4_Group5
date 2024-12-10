@@ -1,22 +1,24 @@
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
-
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <map>
 #include <tuple>
 #include <iostream>
 #include <stdexcept>
 #include <sstream>
 #include <queue>
 #include "customexceptions.hpp"
+using namespace std;
 
 class Graph {
 private:
-    std::unordered_map<int, std::unordered_set<int>> adjacencyList;
-    std::vector<int> sorted;  // Stores topologically sorted vertices
+    map<int, unordered_set<int>> adjacencyList;
+    vector<int> sorted; 
 
 public:
+    
     // Constructors and Destructors
     Graph() = default;
     Graph(const Graph& other);
@@ -31,16 +33,14 @@ public:
     void addVertex(int u);
 
     // Search Algorithms
-    std::unordered_map<int, std::pair<int, int>> breadthFirstSearch(int s);
-    std::unordered_map<int, std::tuple<int, int, int>> depthFirstSearch(bool sort = false);
+    unordered_map<int, pair<int, int>> breadthFirstSearch(int s);
+    unordered_map<int, tuple<int, int, int>> depthFirstSearch(bool sort);
 
     // Utility Methods
-    void sortVertices();
-    const std::vector<int>& getSortedVertices() const;
-    std::vector<int> getOrdering() const;
+    vector<int> getOrdering();
 
     // Input/Output
-    static Graph readFromSTDIN();
+    static Graph readFromSTDIN(); 
 };
 
 #endif
